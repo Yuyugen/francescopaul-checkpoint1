@@ -1,0 +1,52 @@
+body {
+  display: flex;
+  justify-content: center;
+}
+
+.main {
+  width: calc(100% - 10rem);
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__buttons {
+      @extend .main__header;
+      gap: 2rem;
+
+      &__lang {
+        @extend .main__header;
+      }
+    }
+  }
+
+  &__hero {
+    display: flex;
+
+    &__text {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+
+      h2 {
+        font-size: 74px;
+        font-weight: 800;
+        line-height: 100px;
+        margin: 0 0;
+      }
+
+      p {
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 31px;
+        margin: 0 0;
+      }
+
+      button {
+        margin-top: 2rem;
+        width: 50%;
+      }
+    }
+  }
+}
